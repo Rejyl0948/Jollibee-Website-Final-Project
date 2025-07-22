@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jollibee Nearby Locations - FEU Alabang</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        window.onload = function() {
+            
+            const bee = document.createElement('img');
+            bee.src = 'https://1000logos.net/wp-content/uploads/2021/05/Jollibee-logo.png';
+            bee.alt = 'Jollibee Mascot';
+            bee.style.position = 'fixed';
+            bee.style.right = '24px';
+            bee.style.bottom = '24px';
+            bee.style.width = '300px';
+            bee.style.height = '200px';
+            bee.style.zIndex = '999';
+            bee.style.transition = 'transform 0.7s cubic-bezier(.68,-0.55,.27,1.55)';
+            bee.style.cursor = 'pointer';
+            document.body.appendChild(bee);
+
+            let up = true;
+            setInterval(() => {
+                bee.style.transform = up ? 'translateY(-18px)' : 'translateY(0)';
+                up = !up;
+            }, 900);
+
+            bee.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            
+            setTimeout(() => {
+                for (let i = 0; i < 18; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'fixed';
+                    confetti.style.left = Math.random() * window.innerWidth + 'px';
+                    confetti.style.top = '-30px';
+                    confetti.style.width = '10px';
+                    confetti.style.height = '10px';
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.background = ['#ffd54f', '#d62300', '#ff9800', '#fff8e1'][Math.floor(Math.random()*4)];
+                    confetti.style.zIndex = '999';
+                    confetti.style.opacity = '0.8';
+                    confetti.style.pointerEvents = 'none';
+                    document.body.appendChild(confetti);
+
+                    setTimeout(() => {
+                        confetti.style.transition = 'top 1.5s cubic-bezier(.68,-0.55,.27,1.55), opacity 1.5s';
+                        confetti.style.top = (80 + Math.random()*80) + 'px';
+                        confetti.style.opacity = '0';
+                    }, 100);
+
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 1700);
+                }
+            }, 400);
+
+           
+            bee.addEventListener('mouseenter', function() {
+                for (let i = 0; i < 12; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.style.position = 'fixed';
+                    sparkle.style.left = (window.innerWidth - 180 + Math.random()*120) + 'px';
+                    sparkle.style.top = (window.innerHeight - 120 + Math.random()*80) + 'px';
+                    sparkle.style.width = '8px';
+                    sparkle.style.height = '8px';
+                    sparkle.style.borderRadius = '50%';
+                    sparkle.style.background = '#fffde7';
+                    sparkle.style.boxShadow = '0 0 12px #ffd54f';
+                    sparkle.style.zIndex = '1000';
+                    sparkle.style.opacity = '0.9';
+                    sparkle.style.pointerEvents = 'none';
+                    document.body.appendChild(sparkle);
+
+                    setTimeout(() => {
+                        sparkle.style.transition = 'opacity 0.8s, transform 0.8s';
+                        sparkle.style.opacity = '0';
+                        sparkle.style.transform = 'scale(1.8)';
+                    }, 100);
+
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 900);
+                }
+            });
+
+            
+            document.querySelectorAll('.location-item').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    item.style.transition = 'box-shadow 0.3s, transform 0.3s';
+                    item.style.boxShadow = '0 0 24px #ffd54f';
+                    item.style.transform = 'scale(1.03)';
+                    setTimeout(() => {
+                        item.style.boxShadow = '';
+                        item.style.transform = '';
+                    }, 350);
+                });
+            });
+
+            
+            document.querySelectorAll('nav a').forEach(function(link) {
+                link.addEventListener('mouseenter', function(e) {
+                    for (let i = 0; i < 3; i++) {
+                        const heart = document.createElement('div');
+                        heart.innerHTML = '❤';
+                        heart.style.position = 'fixed';
+                        heart.style.left = (e.clientX + Math.random()*20 - 10) + 'px';
+                        heart.style.top = (e.clientY - 10) + 'px';
+                        heart.style.fontSize = '1.2em';
+                        heart.style.color = '#d62300';
+                        heart.style.opacity = '0.8';
+                        heart.style.zIndex = '1000';
+                        heart.style.pointerEvents = 'none';
+                        document.body.appendChild(heart);
+
+                        setTimeout(() => {
+                            heart.style.transition = 'top 0.8s, opacity 0.8s';
+                            heart.style.top = (e.clientY - 40 - Math.random()*20) + 'px';
+                            heart.style.opacity = '0';
+                        }, 100);
+
+                        setTimeout(() => {
+                            heart.remove();
+                        }, 900);
+                    }
+                });
+            });
+        };
+
+        function scrollToLocation(index) {
+            const items = document.querySelectorAll('.location-item');
+            if (items[index]) {
+                items[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                items[index].style.outline = '3px solid #ff9800';
+                setTimeout(() => { items[index].style.outline = ''; }, 1200);
+            }
+        }
+
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') scrollToLocation(0);
+            if (e.key === '2') scrollToLocation(1);
+            if (e.key === '3') scrollToLocation(2);
+        });
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        const header = document.querySelector('header');
+        header.style.opacity = 0;
+        header.style.transition = 'opacity 1.2s';
+        setTimeout(() => { header.style.opacity = 1; }, 200);
+
+        
+        document.querySelectorAll('.location-item').forEach(function(item) {
+            item.addEventListener('mouseenter', function() {
+                item.style.background = '#fffde7';
+                item.style.boxShadow = '0 4px 16px rgba(214,35,0,0.08)';
+            });
+            item.addEventListener('mouseleave', function() {
+                item.style.background = '';
+                item.style.boxShadow = '';
+            });
+        });
+
+        
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('mouseover', function() {
+                link.style.color = '#ff9800';
+            });
+            link.addEventListener('mouseout', function() {
+                link.style.color = '#d62300';
+            });
+        });
+    });
+    </script>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff8e1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #d62300;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            letter-spacing: 2px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .location-list {
+            list-style: none;
+            padding: 0;
+        }
+        .location-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ffe0b2;
+            padding-bottom: 20px;
+        }
+        .location-item:last-child {
+            border-bottom: none;
+        }
+        .location-img {
+            width: 120px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 24px;
+            border: 2px solid #ffd54f;
+        }
+        .location-details {
+            flex: 1;
+        }
+        .location-title {
+            font-size: 1.2em;
+            color: #d62300;
+            margin: 0 0 6px 0;
+        }
+        .location-address {
+            margin: 0 0 8px 0;
+            color: #444;
+        }
+        .location-map a {
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 0.98em;
+        }
+        .location-map a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .location-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .location-img {
+                margin-bottom: 12px;
+                margin-right: 0;
+                width: 100%;
+                height: 150px;
+            }
+        }
+        nav {
+            background: #fff3e0;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #d62300;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 500;
+            font-size: 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="data:image/jpeg;base64,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">
+        <h1>Jollibee Nearby Locations</h1>
+        <p>Your Location FEU Alabang Area</p>
+    </header>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="jabeemenu.html">Menu</a>
+        <a href="THIRD_PAGE.html" style="font-weight:bold;">Nearby Locations</a>
+    </nav>
+    <div class="container">
+        <h2 style="color:#d62300;">Find the Nearest Jollibee!</h2>
+        <ul class="location-list">
+            <li class="location-item">
+                <img class="location-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiS4KV3ByufgIcujaWeRg7rsqiUC2JzKyx-009Jx2YMC_gkHyAPAqkvR1iTFeD4HAxkqw6D-7yeMw1ph3C20EWN-YbS5WKToHOs5YDPHPmk3CuqjnmcC6IKp3gpxXKoTu0VyhhY6BKqEcY/s1600/JSM_1492.jpg" alt="Jollibee Festival Mall">
+                <div class="location-details">
+                    <div class="location-title">Jollibee Festival Mall Alabang</div>
+                    <div class="location-address">
+                        Level 1, Festival Mall, Civic Drive, Filinvest City, Alabang, Muntinlupa, Metro Manila
+                    </div>
+                    <div class="location-map">
+                        <a href="https://www.google.com/maps/dir/FEU+Alabang/Jollibee+-+Festival+Mall+(Ground+Floor),+Festival+Supermall+Commerce+Ave,+Muntinlupa+City,+1781+Metro+Manila/@14.4162041,121.0350438,16z/data=!4m13!4m12!1m5!1m1!1s0x3397d04c18edb14d:0xb5414d4cc0f9245!2m2!1d121.0380546!2d14.4106908!1m5!1m1!1s0x3397d18692cbd885:0x11b708eb1f420c67!2m2!1d121.0414334!2d14.4177932?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">View on Google Maps</a>
+                    </div>
+                </div>
+            </li>
+            <li class="location-item">
+                <img class="location-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ5CgU5ULmamNOj0eiq5VUMU1oLNqod8pu_Q&s" alt="Jollibee South Station">
+                <div class="location-details">
+                    <div class="location-title">Jollibee South Station Alabang</div>
+                    <div class="location-address">
+                        Jolllibee, Near South Luzon Expressway (SLEX) South Station, Alabang-Zapote Road, Muntinlupa, Metro Manila
+                    </div>
+                    <div class="location-map">
+                        <a href="https://www.google.com/maps/dir/FEU+Alabang/Jollibee/@14.4166603,121.0407139,16z/data=!4m13!4m12!1m5!1m1!1s0x3397d04c18edb14d:0xb5414d4cc0f9245!2m2!1d121.0380546!2d14.4106908!1m5!1m1!1s0x3397d17c2fa17567:0x802cc9bdbb96845d!2m2!1d121.043857!2d14.4187104?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">View on Google Maps</a>
+                    </div>
+                </div>
+            </li>
+            <li class="location-item">
+                <img class="location-img" src="https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_300,dpr_3/https://assets.app.engoo.com/images/1gU6gLS4GeHi1KMJ4IdZ48.jpeg" alt="Jollibee Molito">
+                <div class="location-details">
+                    <div class="location-title">Jollibee Molito Alabang</div>
+                    <div class="location-address">
+                        Molito Commercial Complex, Madrigal Ave. cor. Commerce Ave., Alabang, Muntinlupa, Metro Manila
+                    </div>
+                    <div class="location-map">
+                        <a href="https://www.google.com/maps/dir/FEU+Alabang/Jollibee,+Brgy,+Alabang+Zapote+Rd,+corner+Madrigal+Ave,+Muntinlupa+City,+Metro+Manila/@14.415176,121.0305962,16z/data=!4m13!4m12!1m5!1m1!1s0x3397d04c18edb14d:0xb5414d4cc0f9245!2m2!1d121.0380546!2d14.4106908!1m5!1m1!1s0x3397d1c10f3f753f:0x6e298e4bcb6f295c!2m2!1d121.0278962!2d14.4257704?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D">View on Google Maps</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <p style="margin-top:30px; color:#888; font-size:0.98em;">
+            *Locations and details are for reference. Please check Google Maps for latest info.
+        </p>
+    </div>
+    
+</body>
+</html>

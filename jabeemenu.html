@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jollibee Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    nav {
+      background: red;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff3e0;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 500;
+      font-size: 1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #dc2626;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 9999px;
+      display: none;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+    #backToTop:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+
+<body class="bg-yellow-50 font-sans">
+  <header class="bg-red-600 text-white py-4 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex items-center">
+      <img src="https://pnghq.com/wp-content/uploads/jollibee-logo-png-transparent-image-download-94326.png" alt="Jollibee Logo" class="w-16 h-16 mr-4">
+      <h1 class="text-3xl sm:text-4xl font-bold">Jollibee Meals, Combos, Beverages, and Desserts</h1>
+    </div>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="jabeemenu.html" style="font-weight:bold;">Menu</a>
+      <a href="THIRD_PAGE.html">Nearby Locations</a>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="menuContainer">
+           <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/d77e2ed5-f92b-4bc3-8e94-52bf8020d150.png" alt="Chickenjoy" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Chickenjoy</h2>
+        <p class="text-gray-600 mt-1">Crispylicious, juicylicious fried chicken!</p>
+        <p class="text-red-600 font-bold mt-2">₱99.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/fcd38ce2-756f-4879-b3b4-276a3a36843b.png" alt="Jolly Spaghetti" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Jolly Spaghetti</h2>
+        <p class="text-gray-600 mt-1">Sweet-style spaghetti with hotdog slices.</p>
+        <p class="text-red-600 font-bold mt-2">₱55.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/a27bf66d-3bf3-428a-843a-12c36a521ca8.png" alt="Burger Steak" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Burger Steak</h2>
+        <p class="text-gray-600 mt-1">Meaty burger patties with savory gravy.</p>
+        <p class="text-red-600 font-bold mt-2">₱65.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/f178575a-3b27-4696-ad10-7f197c5e2667.png">
+        <h2 class="text-xl font-semibold text-gray-800">Yumburger</h2>
+        <p class="text-gray-600 mt-1">Langhap-sarap burger with Jolly dressing.</p>
+        <p class="text-red-600 font-bold mt-2">₱40.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/aa5b5490-d644-4ef7-b16c-2bc55767c177.png" alt="6 - pc. Chickenjoy Solo" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">6 - pc. Chickenjoy Solo</h2>
+        <p class="text-gray-600 mt-1">Crispy, juicy, pure Chickenjoy bliss!.</p>
+        <p class="text-red-600 font-bold mt-2">₱505.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/a661515e-fe02-4ce6-b115-3157bdb779ff.png" alt="6-pc. Chicken Nuggets" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">6-pc. Chicken Nuggets</h2>
+        <p class="text-gray-600 mt-1">Pop a bite of joy! Perfect for sharing.</p>
+        <p class="text-red-600 font-bold mt-2">₱109.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/a00de443-b191-4ac6-94cd-7f31e3dc7f89.png" alt="Pepper Cream Chicken Fillet" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Pepper Cream Chicken Fillet</h2>
+        <p class="text-gray-600 mt-1">Creamy, peppery perfection with every bite.</p>
+        <p class="text-red-600 font-bold mt-2">₱76.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/4ba4ee0a-79e2-4944-963a-2d16369cf46a.png" alt="Tomato 'n Cheese Chicken Fillet" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Tomato 'n Cheese Chicken Fillet</h2>
+        <p class="text-gray-600 mt-1">A cheesy, tangy twist on a classic favorite.</p>
+        <p class="text-red-600 font-bold mt-2">₱83.00</p>
+      </div>
+
+         <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/c15096e4-4b7f-4fc2-b4fb-f63ca2ea396e.png" alt="Yumburger GameJoy Combo" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Yumburger GameJoy Combo</h2>
+        <p class="text-gray-600 mt-1">Your favorite Yumburger, now with more fun!</p>
+        <p class="text-red-600 font-bold mt-2">₱119.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/b206161b-dc3f-4f51-b874-d61ee698d005.png" alt="Cheesy Yumburger GameJoy Combo" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Cheesy Yumburger GameJoy Combo</h2>
+        <p class="text-gray-600 mt-1">Double the cheese, double the fun! Cheesy Yumburger delight.</p>
+        <p class="text-red-600 font-bold mt-2">₱139.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/2a65f844-2b10-4123-992d-0a857c7b8934.png" alt="Crunchy Chicken Sandwich GameJoy Combo" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Crunchy Chicken Sandwich GameJoy Combo</h2>
+        <p class="text-gray-600 mt-1">The satisfying crunch you crave, in a combo!</p>
+        <p class="text-red-600 font-bold mt-2">₱139.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/b585b8b1-38c9-4e7f-9745-b29ace68caee.png" alt="Jolly Hotdog GameJoy Combo" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Jolly Hotdog GameJoy Combo</h2>
+        <p class="text-gray-600 mt-1">Classic comfort in a bun, made even jollier!</p>
+        <p class="text-red-600 font-bold mt-2">₱139.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/cac797ff-acc7-443e-9080-04c424eb7644.png" alt="Coke" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Coke</h2>
+        <p class="text-gray-600 mt-1">The classic fizz, perfectly refreshing.</p>
+        <p class="text-red-600 font-bold mt-2">₱63.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/e4e805e9-e4a7-46f4-829a-1902cce8c708.png" alt="Sprite" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Sprite</h2>
+        <p class="text-gray-600 mt-1">Crisp, clean, and perfectly clear.</p>
+        <p class="text-red-600 font-bold mt-2">₱63.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/592a6102-c3ca-4136-a4d8-4193320988e6.png" alt="Royal" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Royal</h2>
+        <p class="text-gray-600 mt-1">Bursting with orange zest, pure sunshine in a cup!</p>
+        <p class="text-red-600 font-bold mt-2">₱63.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/7ebc7229-2577-4df6-86fb-1a3dc65bd05c.png" alt="Minute Maid" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Minute Maid</h2>
+        <p class="text-gray-600 mt-1">Tangy, sweet, and wonderfully refreshing.</p>
+        <p class="text-red-600 font-bold mt-2">₱68.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/46f6e1ae-1fe5-42d0-9d63-2635d5f3ded1.png" alt="Mango Jelly Sundae" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Mango Jelly Sundae</h2>
+        <p class="text-gray-600 mt-1">Sweet mango swirls with a delightful jelly surprise!</p>
+        <p class="text-red-600 font-bold mt-2">₱65.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/29aba8cd-91ff-4d51-875d-c1944f967654.png" alt="Cookies & Cream Sundae" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Cookies & Cream Sundae</h2>
+        <p class="text-gray-600 mt-1">Classic cookies and creamy goodness, a perfect treat.</p>
+        <p class="text-red-600 font-bold mt-2">₱60.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/2e895582-9791-43a9-92a7-98ce83efed93.png" alt="Chocolate Sundae" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Chocolate Sundae</h2>
+        <p class="text-gray-600 mt-1">Rich chocolate swirl, simply irresistible.</p>
+        <p class="text-red-600 font-bold mt-2">₱54.00</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition">
+        <img src="https://cdn-menu-us-east-1.tillster.com/jb-ph/d0575d37-1f40-4f36-8353-0dbdd1d75877.png" alt="Peach Mango Pie" class="rounded-lg mb-4">
+        <h2 class="text-xl font-semibold text-gray-800">Peach Mango Pie</h2>
+        <p class="text-gray-600 mt-1">Warm, fruity, and flaky – a taste of the tropics!</p>
+        <p class="text-red-600 font-bold mt-2">₱44.00</p>
+      </div>
+    </section>
+  </main>
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
+      <button id="closeModal" class="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl font-bold">&times;</button>
+      <img id="modalImage" src="" alt="Item Image" class="w-full rounded-lg mb-4">
+      <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+      <p id="modalDescription" class="text-gray-600 mt-2"></p>
+      <p id="modalPrice" class="text-red-600 font-bold mt-3 text-lg"></p>
+    </div>
+  </div>
+
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+  
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalPrice = document.getElementById('modalPrice');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('#menuContainer > div').forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img').src;
+        const title = card.querySelector('h2').innerText;
+        const description = card.querySelector('p').innerText;
+        const price = card.querySelectorAll('p')[1].innerText;
+
+        modalImage.src = img;
+        modalTitle.innerText = title;
+        modalDescription.innerText = description;
+        modalPrice.innerText = price;
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
+
